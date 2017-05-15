@@ -27,7 +27,7 @@
 	}));
     app.use(controller.get('/index',function*(){
         this.set('Cache-Control','no-cache');
-        this.body = yield render('index',{title:'书城首页'});
+        this.body = yield render('index1',{title:'书城首页'});
     }));
     app.use(controller.get('/rank',function*(){
         this.set('Cache-Control','no-cache');
