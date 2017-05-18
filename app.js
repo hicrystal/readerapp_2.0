@@ -12,7 +12,7 @@
     //访问静态文件
 	app.use(koa_static({
 	    rootDir:'./static/',
-		rootPath:'/s/',
+		rootPath:'/static/',
 		maxage : 0
 	}));
 
