@@ -54,9 +54,10 @@
         var queryString=require('queryString');
         //http>object
         var params= queryString.parse(this.req._parsedUrl.query);
-        var id=params.id;
-        this.body = yield render('book',{bookId:bookId});
-    })); app.use(controller.get('/search',function*(){
+        var bookId=params.id;
+        this.body = yield render('book',{nav:'书籍详情',bookId:bookId});
+    }));
+    app.use(controller.get('/search',function*(){
         this.set('Cache-Control','no-cache');
         this.body = yield render('search',{test:'搜素页面'});
     }));

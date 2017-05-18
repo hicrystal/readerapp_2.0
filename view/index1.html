@@ -9,22 +9,33 @@
 
     </head>
 <body>
-<div id="root">
-   <% include include/header.html %>
-</div>
-<% include include/index-top.html %>
-<% include include/index-hot.html %>
-<% include include/index-recommend.html %>
-<% include include/index-female.html %>
-<% include include/index-male.html %>
-<% include include/index-free.html %>
-<% include include/index-bottom.html %>
+
+<div  id="app" style="width:734px;overflow: hidden" >
+    <% include include/header.html %>
+    <div style="width: 1468px;transition-duration:.5s;transform:translate3d({{ position }}px,0px,0px) ">
+        <div class="container-warp" style="width:734px;float: left">
+
+            <div class="container-scroll" style="top:0px">
+            <% include include/index-top.html %>
+            <% include include/index-hot.html %>
+            <% include include/index-recommend.html %>
+            <% include include/index-female.html %>
+            <% include include/index-male.html %>
+            <% include include/index-free.html %>
+            <% include include/index-bottom.html %>
+            </div>
+        </div>
+            <div style="width: 734px;float: left">
+                <% include include/index-shelf.html %>
+            </div>
+    </div>
 
 </div>
+
 </body>
-
+    <script src="/static/javascript/vue.js"></script>
+    <script src="/static/javascript/zepto.js"></script>
 <script src="/static/javascript/page/index.js"></script>
-<script src="/static/javascript/vue.js"></script>
-<script src="static/javascript/zepto.js"></script>
+
 
 </html>
